@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Details</title>
+    <?php echo $__env->make('includes.css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    
+  </head>
+  <body>
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Alert</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            Your Message has been sent
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+    
+        </div>
+      </div>
+  </div>
+  <div class="site-loader"></div>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+    <?php echo $__env->make('includes.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+  </div>
+
+  <div class="slide-one-item home-slider owl-carousel">
+
+    <div class="site-blocks-cover overlay" style="background-image: url(<?php echo e(asset('images/Party/cover\ 2.jpg')); ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+            <!--<span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">For Rent</span> -->
+            <h1 class="mb-2">Party </h1>
+            <p class="mb-5"><strong class="h5">
+            <p> Keep on celebrating your events as we provide solutions in your budget. Make birthday parties, rozakushai and all the several events special</strong></p>
+           <!-- <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a></p> --> 
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="site-blocks-cover overlay" style="background-image: url(<?php echo e(asset('images/Party/cover.jpg')); ?>);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-10">
+           
+            <h1 class="mb-2">Party venues</h1>
+            <p class="mb-5"><strong class="h5">
+            <p> Keep on celebrating your events as we provide solutions in your budget. Make birthday parties, rozakushai and all the several events special</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+  </div>
+
+
+  </div>
+
+  
+
+
+             
+
+
+  <div class="site-section site-section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div>
+            <div class="slide-one-item home-slider owl-carousel">
+              <div><img src="<?php echo e(asset('images/Party/'.$venue->image)); ?>" alt="Image" class="img-fluid"></div>
+              
+            </div>
+          </div>
+          <div class="bg-white property-body border-bottom border-left border-right">
+            <div class="row mb-5">
+              <div class="col-md-6">
+                <strong class="text-success h1 mb-3"><?php echo e($venue->name); ?></strong>
+              </div>
+              <div class="col-md-6">
+                <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
+                <li>
+                  <span class="property-specs">Size/Yards</span>
+                  <span class="property-specs-number"><?php echo e($venue->size); ?> <sup>+</sup></span>
+                  
+                </li>
+                <li>
+                  <span class="property-specs">Accomodation</span>
+                  <span class="property-specs-number"><?php echo e($venue->accomodation); ?></span>
+                  
+                </li>
+               
+              </ul>
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+                <span class="d-inline-block text-black mb-0 caption-text">Event Type</span>
+                <strong class="d-block"><?php echo e($venue->type); ?></strong>
+              </div>
+              <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+                <span class="d-inline-block text-black mb-0 caption-text">Availibility</span>
+                <strong class="d-block"><?php echo e($venue->availiblity); ?></strong>
+              </div>
+              <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+                <span class="d-inline-block text-black mb-0 caption-text">Price</span>
+                <strong class="d-block">Rs <?php echo e($venue->price); ?></strong>
+              </div>
+            </div>
+            <h2 class="h4 text-black">More Info</h2>
+            <p><?php echo e($venue->info); ?></p>
+            
+
+            <div class="row no-gutters mt-5">
+              <div class="col-12">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+
+          <div class="bg-white widget border rounded">
+
+            <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
+            <form method="POST" action="" class="form-contact-agent" id="contact_us">
+              <?php echo csrf_field(); ?>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" class="form-control" required>
+              </div>
+              <input type="hidden" value="<?php echo e($venue->name); ?>" name="vname">
+              <input type="hidden" value="<?php echo e($venue->type); ?>" name="type">
+              <div class="form-group">
+                <input type="submit" id="submit" class="btn btn-primary" value="Send Message">
+              </div>
+            </form>
+          </div>
+
+          <div class="bg-white widget border rounded">
+            <h3 class="h4 text-black widget-title mb-3">About this space</h3>
+            <p><?php echo e($venue->about); ?> </p>    </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+   
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="mb-5">
+                <h3 class="footer-heading mb-4">About VenueR</h3>
+                                            <p>VenueR allows anyone to share and book community spaces by the hour. We all need spaces  to meet, work, celebrate, and more. Find your Space to Connect, Collaborate & Celebrate!</p>
+  </div>
+  
+              
+              
+            </div>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <div class="row mb-5">
+                <div class="col-md-12">
+                  <h3 class="footer-heading mb-4">Navigations</h3>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                  <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Meetings.html">View Properties</a></li>
+                    <li><a href="find space.html">Find Space</a></li>
+                    <li><a href="venuelogin.html">Become Host</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                  <ul class="list-unstyled">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="FAQS.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                   
+                  </ul>
+                </div>
+              </div>
+  
+  
+            </div>
+  
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <h3 class="footer-heading mb-4">Follow Us</h3>
+  
+                  <div>
+                    <a href="https://www.facebook.com/" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                    <a href="https://www.instagram.com/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                    <a href="https://www.linkedin.com/" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                  </div>
+  
+              
+  
+            </div>
+            
+          </div>
+          
+        </div>
+  </footer>
+
+  </div>
+  <script>
+
+
+    
+    $("#contact_us").validate({
+      
+    submitHandler: function(form) {
+      $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+      }); 
+      $.ajax({
+        url: 'message' ,
+        type: "POST",
+        data: $('#contact_us').serialize(),
+        success: function( response ) {
+           $('#myModal').modal('show'); 
+            document.getElementById("contact_us").reset(); 
+        },
+       error: function(jqXHR, textStatus, errorThrown){
+           alert(textStatus, errorThrown);
+       }
+      });
+    }
+  })
+
+
+</script> 
+  <?php echo $__env->make('includes.js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    
+  </body>
+</html><?php /**PATH C:\xampp\htdocs\fyp\resources\views/detail-parties.blade.php ENDPATH**/ ?>
