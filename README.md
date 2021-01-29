@@ -12,5 +12,17 @@ Rentiers can search space according to type, price and accommodation space based
 
 People can select event space based on rating and reviews as the database grows the system can become more reliable. 
 
+We help you to search comfortable spaces in Karachi. Keeping in mind, the needs of the onlookers you will find the best office designs and best working environment with the help of VenueR. You will find the most innovative, unique, creative and playful designs on our website. You will find whatever you want within the best locations and affordable price.
+You can also rent space on it. No need to worry just a click away and our team will get in touch with you to make your search easy.
+
+
+VenueR allows anyone to share and book community spaces by the hour. We all need spaces to meet, work, celebrate, and more. Find your Spaceto Connect, Collaborate & Cocreate!
+![contatct](https://user-images.githubusercontent.com/31243714/106277527-18a5d800-625b-11eb-98df-cd094d3b4796.JPG)
+
+### How it looks
+
 ![sports](https://user-images.githubusercontent.com/31243714/106276775-e051ca00-6259-11eb-8be2-e9af783bf642.JPG)
+![meet](https://user-images.githubusercontent.com/31243714/106277761-6ae6f900-625b-11eb-9343-15472448a96f.JPG)
+
+
 
