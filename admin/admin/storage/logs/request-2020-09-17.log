@@ -1,1 +1,0 @@
-[2020-09-17T15:31:04.266642+00:00] local.INFO: lrIcMLOvgk | HTTP/1.1 200 | ::1 | null | GET http://localhost:8080/hybercashadmin/hybercash/public [] | 10.163525104523 s | Mozilla/5.0\s(Windows\sNT\s10.0;\sWin64;\sx64)\sAppleWebKit/537.36\s(KHTML,\slike\sGecko)\sChrome/85.0.4183.102\sSafari/537.36 | http://localhost:8080/hybercashadmin/hybercash/ ["RESPONSE"] []
